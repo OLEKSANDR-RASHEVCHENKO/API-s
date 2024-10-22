@@ -35,8 +35,8 @@ public class ParsingJsonResponseData {
                 .when().get("http://localhost:3000/book");
         JSONObject jsonObject = new JSONObject(response.asString());
 
-        for (int i=0;i<jsonObject.getJSONArray("x").length();i++){
-           String bookTitle = jsonObject.getJSONArray("x").getJSONObject(i).get("title").toString();
+        for (int i=0;i<jsonObject.getJSONArray("[]").length();i++){
+           String bookTitle = jsonObject.getJSONArray("[]").getJSONObject(i).get("title").toString();
             System.out.println(bookTitle);
         }
 
